@@ -64,15 +64,7 @@ public class NewsMain {
 
 		list.stream()
 		.forEach(s->System.out.println(
-				s.getPostedByUser()  +	" Comment: "   +s.getCommentByUser()  		 ));
-
-
-
-
-
-
-
-
+				s.getPostedByUser()  +	" Comment: "   +s.getCommentByUser() ));
 
 	}
 }
