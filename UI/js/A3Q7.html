@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="p1"></p>
+
+    <script>
+        const str = '{"firstName": "Stuart", "lastName":"Broad"}';
+        const obj = JSON.parse(str);
+        document.getElementById("p1").innerHTML = obj.firstName + " " + obj.lastName;
+
+    </script>
+</body>
+
+</html>

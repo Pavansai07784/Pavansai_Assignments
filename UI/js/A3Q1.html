@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            result() {
+                document.writeln("Rectangle Width: " + this.width + " Rectangle height: " + this.height + "<br>");
+            }
+            result1() {
+                document.writeln("Rectangle height: " + this.height + "Rectangle Width: " + this.width + "<br>");
+            }
+        }
+
+        var rec1 = new Rectangle(20, 30);
+        var rec2 = new Rectangle(10, 50);
+
+        rec1.result();
+        rec2.result();
+
+    </script>
+
+</body>
+
+</html>
