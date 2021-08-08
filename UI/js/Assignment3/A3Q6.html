@@ -1,0 +1,16 @@
+
+<html>
+<body>	
+	<p id="p1"></p>
+	
+	<script>
+
+		var str = "({firstName:'Stuart', lastName:'Broad'})";
+
+		var obj = eval(str);
+
+		document.getElementById("p1").innerHTML = obj.firstName + " " + obj.lastName; 
+
+    </script>
+</body>
+</html>
