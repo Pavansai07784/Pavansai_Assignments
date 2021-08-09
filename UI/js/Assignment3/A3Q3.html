@@ -16,16 +16,14 @@
             result() {
                 document.writeln("Rectangle Width: " + this.width + " Rectangle height: " + this.height + "<br>");
             }
-            result1() {
-                document.writeln("Rectangle height: " + this.height + "Rectangle Width: " + this.width + "<br>");
-            }
+
         }
+        Rectangle.prototype.getArea = function () { return document.writeln("The Area of the Reactangle : " + this.width * this.height) };
 
-        var rec1 = new Rectangle(20, 30);
-        var rec2 = new Rectangle(10, 50);
+        var rec = new Rectangle(5,4);
 
-        rec1.result();
-        rec2.result();
+        rec.result();
+        rec.getArea();
 
     </script>
 </body>
