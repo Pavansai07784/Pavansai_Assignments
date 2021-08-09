@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function bblSort(arr) {
+
+            for (var i = 0; i < arr.length; i++) {
+
+
+                for (var j = 0; j < (arr.length - i - 1); j++) {
+
+
+
+                    if (arr[j] > arr[j + 1]) {
+
+
+                        var temp = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = temp
+                    }
+                }
+            }
+
+            document.writeln(arr);
+        }
+
+
+        var arr = [21,54,3,5,6,8,9,7,2,1,11,22,33,55,44,77,88,9945,85,25,95];
+
+
+        bblSort(arr);
+
+
+    </script>
+</body>
+
+</html>
