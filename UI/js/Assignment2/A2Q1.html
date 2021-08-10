@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1,3,5,8,9];
+        function isEven(i) {
+            if (i % 2 == 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        }
+        function find(arr, isEven) {
+            const a = arr.shift();
+            if (isEven(a)) {
+
+        
+                return document.writeln(a);
+            }
+            else {
+                find(arr, isEven)
+            }
+
+            return true ;
+        }
+
+        document.write(find(arr, isEven));
+
+
+
+    </script>
+</body>
+
+</html>
