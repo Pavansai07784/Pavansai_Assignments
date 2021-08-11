@@ -1,9 +1,4 @@
-let arr = ["Tom", "Ivan", "jerry"];
-for (let i of arr) {
-    document.write("<br>");
-    document.write("[{");
-
-    var a = () => " name: " + i + " length " + i.length;
-    document.write(a() + ",");
-}
-document.write("}]");
+let array=["kpceddy","kyatmwar","purnachandar"];
+let[first,second,third]=array;
+for(let i of array)
+console.log("name "+i+" length: ",i.length);
