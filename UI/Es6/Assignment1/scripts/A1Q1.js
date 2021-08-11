@@ -1,4 +1,4 @@
-const number = 42;
+let number = 42;
 try {
     number = 99;
 }
