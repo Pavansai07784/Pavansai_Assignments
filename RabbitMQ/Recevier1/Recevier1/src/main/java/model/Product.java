@@ -1,4 +1,4 @@
-package com.product.model;
+package com.mod.model;
 
 import java.io.Serializable;
 
@@ -8,9 +8,8 @@ public class Product implements Serializable
 	private int productId;
 	private String name;
 	private int quantity;
-
 	public Product() {
-
+		
 	}
 	public Product(int p,String s,int q){
 		this.productId=p;

@@ -1,9 +1,10 @@
-package config;
+package com.con.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.core.Queue;
+
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.context.annotation.Bean;
@@ -13,13 +14,15 @@ import org.springframework.stereotype.Component;
 public class RabbitMQConfiguration
 {
 
-	public static final String fanoutExchangeName="inventory_exchange";
-	
+	public static final String fanoutExchangeName = "inventory_exchange";
+
+
 	@Bean
 	Queue queue1()
 	{
 		return new Queue("retail1", false);
 	}
+
 	@Bean
 	Queue queue2()
 	{
@@ -30,7 +33,6 @@ public class RabbitMQConfiguration
 	{
 		return new Queue("retail3", false);
 	}
-
 	@Bean
 	FanoutExchange exchange()
 	{
@@ -38,17 +40,17 @@ public class RabbitMQConfiguration
 	}
 
 	@Bean
-	Binding retail1binding(Queue queue1, FanoutExchange exchange)
+	Binding binding1(Queue queue1, FanoutExchange exchange)
 	{
 		return BindingBuilder.bind(queue1).to(exchange);
 	}
 	@Bean
-	Binding retail2binding(Queue queue2, FanoutExchange exchange)
+	Binding binding2(Queue queue2, FanoutExchange exchange)
 	{
 		return BindingBuilder.bind(queue2).to(exchange);
 	}
 	@Bean
-	Binding retail3binding(Queue queue3, FanoutExchange exchange)
+	Binding binding3(Queue queue3, FanoutExchange exchange)
 	{
 		return BindingBuilder.bind(queue3).to(exchange);
 	}
